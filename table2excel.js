@@ -1,5 +1,5 @@
 //table2excel.js
-//src = https://cdn.rawgit.com/unconditional/jquery-table2excel/master/src/jquery.table2excel.js
+//src = "https://cdn.rawgit.com/unconditional/jquery-table2excel/master/src/jquery.table2excel.js"
 ;(function ( $, window, document, undefined ) {
     var pluginName = "table2excel",
 
