@@ -9,6 +9,7 @@
 
  Licensed under the MIT License
 */
+//src = "https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.9.9/tableExport.min.js"
 var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.findInternal=function(c,h,u){c instanceof String&&(c=String(c));for(var C=c.length,D=0;D<C;D++){var O=c[D];if(h.call(u,O,D,c))return{i:D,v:O}}return{i:-1,v:void 0}};$jscomp.ASSUME_ES5=!1;$jscomp.ASSUME_NO_NATIVE_MAP=!1;$jscomp.ASSUME_NO_NATIVE_SET=!1;$jscomp.defineProperty=$jscomp.ASSUME_ES5||"function"==typeof Object.defineProperties?Object.defineProperty:function(c,h,u){c!=Array.prototype&&c!=Object.prototype&&(c[h]=u.value)};
 $jscomp.getGlobal=function(c){return"undefined"!=typeof window&&window===c?c:"undefined"!=typeof global&&null!=global?global:c};$jscomp.global=$jscomp.getGlobal(this);$jscomp.polyfill=function(c,h,u,C){if(h){u=$jscomp.global;c=c.split(".");for(C=0;C<c.length-1;C++){var D=c[C];D in u||(u[D]={});u=u[D]}c=c[c.length-1];C=u[c];h=h(C);h!=C&&null!=h&&$jscomp.defineProperty(u,c,{configurable:!0,writable:!0,value:h})}};
 $jscomp.polyfill("Array.prototype.find",function(c){return c?c:function(c,u){return $jscomp.findInternal(this,c,u).v}},"es6","es3");
