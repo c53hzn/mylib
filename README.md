@@ -1,0 +1,2 @@
+# mylib
+external libraries
