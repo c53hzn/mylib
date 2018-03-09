@@ -5,7 +5,7 @@
 /* usage start*/
 //export only column #2 and #3 and in reverse order
 //NB! columns[] is zero based
-
+//
 // $(".table2excel").table2excel({
 //     name: "Excel Document Name",
 //     filename: "myFileName",
@@ -14,7 +14,7 @@
 //     exclude_inputs: true,
 //     columns : [2,1]
 // })
-
+//
 /* usage end*/
 
 ;(function ( $, window, document, undefined ) {
