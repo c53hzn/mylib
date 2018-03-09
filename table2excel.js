@@ -1,8 +1,9 @@
 //table2excel.js
-//original src = "https://cdn.rawgit.com/unconditional/jquery-table2excel/master/src/jquery.table2excel.js"
+//original src = "https://github.com/rainabba/jquery-table2excel"
 //optimized version src = "https://github.com/davidkonrad/table2excel"
 
 /* usage start*/
+//
 //export only column #2 and #3 and in reverse order
 //NB! columns[] is zero based
 //
