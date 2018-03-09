@@ -1,11 +1,29 @@
 //table2excel.js
-//src = "https://cdn.rawgit.com/unconditional/jquery-table2excel/master/src/jquery.table2excel.js"
+//original src = "https://cdn.rawgit.com/unconditional/jquery-table2excel/master/src/jquery.table2excel.js"
+//optimized version src = "https://github.com/davidkonrad/table2excel"
+
+/* usage start*/
+//export only column #2 and #3 and in reverse order
+//NB! columns[] is zero based
+
+// $(".table2excel").table2excel({
+//     name: "Excel Document Name",
+//     filename: "myFileName",
+//     exclude_img: true,
+//     exclude_links: true,
+//     exclude_inputs: true,
+//     columns : [2,1]
+// })
+
+/* usage end*/
+
 ;(function ( $, window, document, undefined ) {
     var pluginName = "table2excel",
 
     defaults = {
         exclude: ".noExl",
-                name: "Table2Excel"
+        name: "Table2Excel",
+		columns: []
     };
 
     // The actual plugin constructor
@@ -44,9 +62,22 @@
 
             // get contents of table except for exclude
             $(e.element).each( function(i,o) {
-                var tempRows = "";
-                $(o).find("tr").not(e.settings.exclude).each(function (i,o) {
-                    tempRows += "<tr>" + $(o).html() + "</tr>";
+	        var tempRows = "";
+		$(o).find("tr").not(e.settings.exclude).each(function (i,o) {
+		        if (e.settings.columns.length == 0) {
+	                        tempRows += "<tr>" + $(o).html() + "</tr>";
+			} else {
+				var row = "";
+				e.settings.columns.forEach(function(colIndex) {
+					//is it a thead or tbody row?
+					if ($(o).find('th').length>0) {
+						row += $(o).find('th:eq('+colIndex+')')[0].outerHTML;
+					} else {
+						row += $(o).find('td:eq('+colIndex+')')[0].outerHTML;
+					}
+				})
+				tempRows += '<tr>'+row+'</tr>';
+			}
                 });
                 e.tableRows.push(tempRows);
             });
@@ -107,7 +138,7 @@
                     //otherwise use the iframe and save
                     //requires a blank iframe on page called txtArea1
                     txtArea1.document.open("text/html", "replace");
-                    txtArea1.document.write(fullTemplate);
+                    txtArea1.document.write(e.format(fullTemplate, e.ctx));
                     txtArea1.document.close();
                     txtArea1.focus();
                     sa = txtArea1.document.execCommand("SaveAs", true, getFileName(e.settings) );
