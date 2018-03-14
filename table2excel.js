@@ -7,13 +7,13 @@
 //export only column #2 and #3 and in reverse order
 //NB! columns[] is zero based
 //
-// $(".table2excel").table2excel({
+// $("#mainTable").table2excel({
 //     name: "Excel Document Name",
 //     filename: "myFileName",
 //     exclude_img: true,
 //     exclude_links: true,
 //     exclude_inputs: true,
-//     columns : [2,1]
+//     columns : [1,10,11,12,15,17,18]
 // })
 //
 /* usage end*/
