@@ -18,6 +18,8 @@
 //
 /* usage end*/
 
+//modified by Gigi, 2018-03-22
+//table2excel.js
 ;(function ( $, window, document, undefined ) {
     var pluginName = "table2excel",
 
@@ -51,7 +53,7 @@
                     head: "<x:ExcelWorksheet><x:Name>",
                     tail: "</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>"
                 },
-                mid: "</x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body>",
+                mid: "</x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--><meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\"></head><body>",
                 table: {
                     head: "<table>",
                     tail: "</table>"
