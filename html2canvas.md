@@ -1,3 +1,5 @@
+# HTML2CANVAS插件的使用方法
+
 ## 如果该页面已经有jQuery
 
     ;(function(){
