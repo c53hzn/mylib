@@ -89,3 +89,5 @@
 截图放大思路来自<a href="https://blog.csdn.net/z69183787/article/details/76589471" target="_blank">这里</a>
 
 总是截出来300x150尺寸的解决办法看<a href="https://blog.csdn.net/playboyanta123/article/details/79301050" target="_blank">这里</a>
+
+此插件对border-radius、transform rotate、transform skew都不友好
