@@ -41,8 +41,11 @@
                 link.setAttribute("download","capture");
                 var img = document.createElement("img");
                 img.setAttribute("src",pic);
+                img.setAttribute("id","outputImg");
                 link.appendChild(img);
                 $("body").append(link);
+                //模拟单击事件，触发下载行为
+                $("#outputImg").trigger("click");
             },
             width:1600,
             height:1200
@@ -76,8 +79,11 @@
                 link.setAttribute("download","capture");
                 var img = document.createElement("img");
                 img.setAttribute("src",pic);
+                img.setAttribute("id","outputImg");
                 link.appendChild(img);
                 $("body").append(link);
+                //模拟单击事件，触发下载行为
+                $("#outputImg").trigger("click");
             },
             width:1600,
             height:1200
@@ -90,4 +96,6 @@
 
 总是截出来300x150尺寸的解决办法看<a href="https://blog.csdn.net/playboyanta123/article/details/79301050" target="_blank">这里</a>
 
-此插件对border-radius、transform rotate、transform skew都不友好
+模拟单击事件参考了<a href="https://blog.csdn.net/zhyh1435589631/article/details/52999630" target="_blank">这里</a>
+
+此插件对border-radius、transform rotate、transform skew都不友好，凡是有这些的都会变形，如果页面上有视频元素，则无法截出来
