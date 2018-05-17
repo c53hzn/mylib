@@ -36,6 +36,7 @@
 ## html2canvas插件本身有截图不清晰的问题，如果不需要放大，就用以下的格式
 
     ;(function(){
+        var timeNow = new Date();
         var canvas = document.createElement("canvas");  
         canvas.width = $("body").width();  
         canvas.height = $("body").height();
@@ -48,7 +49,9 @@
                 //使新生成的图片自带下载链接
                 var link = document.createElement("a");
                 link.setAttribute("href",pic);
-                link.setAttribute("download","capture");
+                //下载的文件名称
+                var fileName = "capture" + timeNow.getFullYear() + "-" + timeNow.getMonth() + "-" + timeNow.getDate();
+                link.setAttribute("download",fileName);
                 var img = document.createElement("img");
                 img.setAttribute("src",pic);
                 img.setAttribute("id","outputImg");
@@ -66,18 +69,19 @@
 ## 如果需要放大，则用下面的格式
 
     ;(function(){
-    var w = $("body").width();  
-    var h = $("body").height();
-    /*要将canvas的宽高设置成容器宽高的2倍start*/
-    var canvas = document.createElement("canvas");  
+        var timeNow = new Date();
+        var w = $("body").width();  
+        var h = $("body").height();
+        /*要将canvas的宽高设置成容器宽高的2倍start*/
+        var canvas = document.createElement("canvas");  
         canvas.width = w * 2;  
         canvas.height = h * 2;  
         canvas.style.width = w + "px";  
         canvas.style.height = h + "px";  
-    /*要将canvas的宽高设置成容器宽高的2倍end*/
-    var context = canvas.getContext("2d");//然后将画布缩放，将图像放大两倍画到画布上  
+        /*要将canvas的宽高设置成容器宽高的2倍end*/
+        var context = canvas.getContext("2d");//然后将画布缩放，将图像放大两倍画到画布上  
         context.scale(2,2);  
-
+        
         html2canvas($("body"),{ // $()括号里是你要复制生成canvas的区域，可以自己选
             canvas: canvas,
             onrendered:function(canvas){
@@ -86,7 +90,9 @@
                 //使新生成的图片自带下载链接
                 var link = document.createElement("a");
                 link.setAttribute("href",pic);
-                link.setAttribute("download","capture");
+                //下载的文件名称
+                var fileName = "capture" + timeNow.getFullYear() + "-" + timeNow.getMonth() + "-" + timeNow.getDate();
+                link.setAttribute("download",fileName);
                 var img = document.createElement("img");
                 img.setAttribute("src",pic);
                 img.setAttribute("id","outputImg");
