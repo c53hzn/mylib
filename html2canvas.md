@@ -1,5 +1,7 @@
 # HTML2CANVAS插件的使用方法
 
+**F12打开控制台，先检查有没有jQuery，输入一个$，如果有返回jQuery对象，则说明有**
+
 ## 如果该页面已经有jQuery
 
     ;(function(){
@@ -44,8 +46,8 @@
                 img.setAttribute("id","outputImg");
                 link.appendChild(img);
                 $("body").append(link);
-                //模拟单击事件，触发下载行为
-                $("#outputImg").trigger("click");
+                //模拟单击事件，触发下载行为
+                $("#outputImg").trigger("click");
             },
             width:1600,
             height:1200
@@ -82,8 +84,8 @@
                 img.setAttribute("id","outputImg");
                 link.appendChild(img);
                 $("body").append(link);
-                //模拟单击事件，触发下载行为
-                $("#outputImg").trigger("click");
+                //模拟单击事件，触发下载行为
+                $("#outputImg").trigger("click");
             },
             width:1600,
             height:1200
