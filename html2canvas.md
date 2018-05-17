@@ -1,24 +1,30 @@
 # HTML2CANVAS插件的使用方法
 
-**F12打开控制台，先检查有没有jQuery，输入一个$，如果有返回jQuery对象，则说明有**
+## F12打开控制台，先检查有没有jQuery
+
+    if(typeof(jQuery)=="undefined"){
+        return "jQuery is not imported";
+    }else{
+        return "jQuery is imported";
+    }
 
 ## 如果该页面已经有jQuery
 
     ;(function(){
-    var script1 = document.createElement("script");
-    script1.setAttribute("src","https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js");
-    document.body.appendChild(script1);
+        var script1 = document.createElement("script");
+        script1.setAttribute("src","https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js");
+        document.body.appendChild(script1);
     })();
     
 ## 如果该页面没有jQuery
 
     ;(function(){
-    var script1 = document.createElement("script");
-    script1.setAttribute("src","https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js");
-    document.body.appendChild(script1);
-    var script2 = document.createElement("script");
-    script2.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js");
-    document.body.appendChild(script2);
+        var script1 = document.createElement("script");
+        script1.setAttribute("src","https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js");
+        document.body.appendChild(script1);
+        var script2 = document.createElement("script");
+        script2.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js");
+        document.body.appendChild(script2);
     })();
 
 **一定要先引入上面的部分，分两步走！！！**    
