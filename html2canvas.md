@@ -50,7 +50,7 @@
                 var link = document.createElement("a");
                 link.setAttribute("href",pic);
                 //下载的文件名称
-                var fileName = "capture" + timeNow.getFullYear() + "-" + timeNow.getMonth() + "-" + timeNow.getDate();
+                var fileName = "capture" + timeNow.getFullYear() + "-" + (timeNow.getMonth() + 1) + "-" + timeNow.getDate();
                 link.setAttribute("download",fileName);
                 var img = document.createElement("img");
                 img.setAttribute("src",pic);
@@ -91,7 +91,7 @@
                 var link = document.createElement("a");
                 link.setAttribute("href",pic);
                 //下载的文件名称
-                var fileName = "capture" + timeNow.getFullYear() + "-" + timeNow.getMonth() + "-" + timeNow.getDate();
+                var fileName = "capture" + timeNow.getFullYear() + "-" + (timeNow.getMonth() + 1) + "-" + timeNow.getDate();
                 link.setAttribute("download",fileName);
                 var img = document.createElement("img");
                 img.setAttribute("src",pic);
