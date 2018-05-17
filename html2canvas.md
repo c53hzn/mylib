@@ -1,12 +1,14 @@
 # HTML2CANVAS插件的使用方法
 
-## F12打开控制台，先检查有没有jQuery
+**F12打开控制台，先检查有没有jQuery**
 
-    if(typeof(jQuery)=="undefined"){
-        return "jQuery is not imported";
-    }else{
-        return "jQuery is imported";
-    }
+    ;(function(){
+        if(typeof(jQuery) == "undefined"){
+            return "no jQuery here";
+        }else{
+            return "jQuery is ready for use";
+        }
+    })();
 
 ## 如果该页面已经有jQuery
 
