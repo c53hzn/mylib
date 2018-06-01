@@ -11,3 +11,4 @@
        newWin.document.close();
     }
 
+[Original page](http://www.5imoban.net)
