@@ -7,3 +7,5 @@ A collection of JavaScript libraries, user guide included.
 2. [table2excel(xls format)](https://www.houzhenni.com/mylib/table2excel.js)
 
 3. [html2canvas](https://www.houzhenni.com/mylib/html2canvas)
+
+4. [run code in new tab window](https://www.houzhenni.com/mylib/runcode)
