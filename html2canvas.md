@@ -38,8 +38,8 @@
     ;(function(){
         var timeNow = new Date();
         var bodyMarginLeft = parseInt($('body').css('marginLeft'));
-        var canvas = document.createElement("canvas") + bodyMarginLeft;  
-        canvas.width = $("body").width();  
+        var canvas = document.createElement("canvas");  
+        canvas.width = $("body").width()　+ bodyMarginLeft;  
         canvas.height = $("body").height();
 
         html2canvas($("body"),{ // $()括号里是你要复制生成canvas的区域，可以自己选
