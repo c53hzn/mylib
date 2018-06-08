@@ -37,7 +37,8 @@
 
     ;(function(){
         var timeNow = new Date();
-        var canvas = document.createElement("canvas");  
+        var bodyMarginLeft = parseInt($('body').css('marginLeft'));
+        var canvas = document.createElement("canvas") + bodyMarginLeft;  
         canvas.width = $("body").width();  
         canvas.height = $("body").height();
 
@@ -70,7 +71,8 @@
 
     ;(function(){
         var timeNow = new Date();
-        var w = $("body").width();  
+        var bodyMarginLeft = parseInt($('body').css('marginLeft'));
+        var w = $("body").width() + bodyMarginLeft;  
         var h = $("body").height();
         /*要将canvas的宽高设置成容器宽高的2倍start*/
         var canvas = document.createElement("canvas");  
