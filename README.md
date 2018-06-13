@@ -9,3 +9,5 @@ A collection of JavaScript libraries, user guide included.
 3. [html2canvas](https://www.houzhenni.com/mylib/html2canvas)
 
 4. [run code in new tab window](https://www.houzhenni.com/mylib/runcode)
+
+4. [print webpage file name in console](https://www.houzhenni.com/mylib/pagefilename)
