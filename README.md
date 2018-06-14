@@ -10,4 +10,6 @@ A collection of JavaScript libraries, user guide included.
 
 4. [run code in new tab window](https://www.houzhenni.com/mylib/runcode)
 
-4. [print webpage file name in console](https://www.houzhenni.com/mylib/pagefilename)
+5. [print webpage file name in console](https://www.houzhenni.com/mylib/pagefilename)
+
+6. [print without header and fotter](https://www.houzhenni.com/mylib/printmiddle)
