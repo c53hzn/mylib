@@ -60,37 +60,6 @@
         });
     })();
 
-    ;(function(){
-        var timeNow = new Date();
-        var bodyMarginLeft = parseInt($('body').css('marginLeft'));
-        var canvas = document.createElement("canvas");  
-        canvas.width = $("body").width()　+ bodyMarginLeft;  
-        canvas.height = $("body").height();
-
-        html2canvas($("body"),{ // $()括号里是你要复制生成canvas的区域，可以自己选
-            canvas: canvas,
-            onrendered:function(canvas){
-                dataURL =canvas.toDataURL("image/png");
-                var pic = dataURL;
-                //使新生成的图片自带下载链接
-                var link = document.createElement("a");
-                link.setAttribute("href",pic);
-                //下载的文件名称
-                var fileName = "capture" + timeNow.getFullYear() + "-" + (timeNow.getMonth() + 1) + "-" + timeNow.getDate();
-                link.setAttribute("download",fileName);
-                var img = document.createElement("img");
-                img.setAttribute("src",pic);
-                img.setAttribute("id","outputImg");
-                link.appendChild(img);
-                $("body").append(link);
-                //模拟单击事件，触发下载行为
-                $("#outputImg").trigger("click");
-            },
-            width:1600,
-            height:1200
-        });
-    })();
-
 
 ## 如果需要放大，则用下面的格式
 
@@ -109,7 +78,7 @@
         var context = canvas.getContext("2d");//然后将画布缩放，将图像放大两倍画到画布上  
         context.scale(2,2);  
         
-        html2canvas($("body"),{ // $()括号里是你要复制生成canvas的区域，可以自己选
+        html2canvas(document.body,{ // $()括号里是你要复制生成canvas的区域，可以自己选
             canvas: canvas,
             onrendered:function(canvas){
                 dataURL =canvas.toDataURL("image/png");
@@ -127,9 +96,7 @@
                 $("body").append(link);
                 //模拟单击事件，触发下载行为
                 $("#outputImg").trigger("click");
-            },
-            width:1600,
-            height:1200
+            }
         });
     })();
 
