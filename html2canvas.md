@@ -38,9 +38,11 @@
     ;(function(){
         html2canvas(document.body).then(function(canvas) {
             var timeNow = new Date();
-            document.body.appendChild(canvas);
             dataURL = canvas.toDataURL("image/png");
             var pic = dataURL;
+            canvas.style.display = "none";
+            document.body.appendChild(canvas);
+            
             //使新生成的图片自带下载链接
             var link = document.createElement("a");
             link.setAttribute("href",pic);
