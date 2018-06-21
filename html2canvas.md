@@ -37,9 +37,7 @@
 
     ;(function(){
         html2canvas(document.body,{
-            attribute: allowTaint,
-            type: boolean,
-            default: false
+            allowTaint: true
         }).then(function(canvas) {
             var timeNow = new Date();
             dataURL = canvas.toDataURL("image/png");
