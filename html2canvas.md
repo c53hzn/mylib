@@ -4,9 +4,9 @@
 
     ;(function(){
         if(typeof(jQuery) == "undefined"){
-            return "no jQuery here";
+            return false;
         }else{
-            return "jQuery is ready for use";
+            return true;
         }
     })();
 
@@ -14,7 +14,7 @@
 
     ;(function(){
         var script1 = document.createElement("script");
-        script1.setAttribute("src","https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js");
+        script1.setAttribute("src","https://www.houzhenni.com/mylib/html2canvas.min.js");
         document.body.appendChild(script1);
     })();
     
@@ -22,7 +22,7 @@
 
     ;(function(){
         var script1 = document.createElement("script");
-        script1.setAttribute("src","https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js");
+        script1.setAttribute("src","https://www.houzhenni.com/mylib/html2canvas.min.js");
         document.body.appendChild(script1);
         var script2 = document.createElement("script");
         script2.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js");
