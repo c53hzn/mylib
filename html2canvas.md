@@ -3,11 +3,7 @@
 ## F12打开控制台，先检查有没有jQuery
 
     ;(function(){
-        if(typeof(jQuery) == "undefined"){
-            return false;
-        }else{
-            return true;
-        }
+        return typeof(jQuery) != "undefined";
     })();
 
 ## 如果该页面已经有jQuery
