@@ -36,9 +36,7 @@
 ## html2canvas插件本身有截图不清晰的问题，如果不需要放大，就用以下的格式
 
     ;(function(){
-        html2canvas(document.body,{
-            allowTaint: true
-        }).then(function(canvas) {
+        html2canvas(document.body).then(function(canvas) {
             var timeNow = new Date();
             dataURL = canvas.toDataURL("image/png");
             var pic = dataURL;
