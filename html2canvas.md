@@ -36,6 +36,29 @@
 ## html2canvas插件本身有截图不清晰的问题，如果不需要放大，就用以下的格式
 
     ;(function(){
+        html2canvas(document.body).then(function(canvas) {
+            var timeNow = new Date();
+            document.body.appendChild(canvas);
+            dataURL = canvas.toDataURL("image/png");
+            var pic = dataURL;
+            //使新生成的图片自带下载链接
+            var link = document.createElement("a");
+            link.setAttribute("href",pic);
+            //下载的文件名称
+            var fileName = "capture" + timeNow.getFullYear() + "-" + (timeNow.getMonth() + 1) + "-" + timeNow.getDate();
+            link.setAttribute("download",fileName);
+            var img = document.createElement("img");
+            img.setAttribute("src",pic);
+            img.setAttribute("id","outputImg");
+            link.appendChild(img);
+            link.style.display = "none";
+            document.body.appendChild(link);
+            //模拟单击事件，触发下载行为
+            $("#outputImg").trigger("click");
+        });
+    })();
+
+    ;(function(){
         var timeNow = new Date();
         var bodyMarginLeft = parseInt($('body').css('marginLeft'));
         var canvas = document.createElement("canvas");  
