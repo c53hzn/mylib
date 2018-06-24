@@ -7,9 +7,9 @@
 			var script = document.createElement("script");
 	        script.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js");
 	        document.body.appendChild(script);
-	        console.log("jQuery is added");
+	        console.log("no need to add jQuery again");
 		}else{
-			console.log("no need to add jQuery again");
+			console.log("jQuery is added");
 		}
 	})();
 
