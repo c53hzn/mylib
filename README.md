@@ -13,3 +13,5 @@ A collection of JavaScript libraries, user guide included.
 5. [print webpage file name in console](https://www.houzhenni.com/mylib/pagefilename)
 
 6. [print without header and footer](https://www.houzhenni.com/mylib/printmiddle)
+
+7. [add jQuery if needed](https://www.houzhenni.com/mylib/addjquery)
