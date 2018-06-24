@@ -1,32 +1,13 @@
 # HTML2CANVAS插件的使用方法
 
-## F12打开控制台，先检查有没有jQuery
 
-    ;(function(){
-        return typeof(jQuery) != "undefined";
-    })();
-
-## 如果该页面已经有jQuery
+## 添加html2canvas插件
 
     ;(function(){
         var script1 = document.createElement("script");
         script1.setAttribute("src","https://www.houzhenni.com/mylib/html2canvas.min.js");
         document.body.appendChild(script1);
     })();
-    
-## 如果该页面没有jQuery
-
-    ;(function(){
-        var script1 = document.createElement("script");
-        script1.setAttribute("src","https://www.houzhenni.com/mylib/html2canvas.min.js");
-        document.body.appendChild(script1);
-        var script2 = document.createElement("script");
-        script2.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js");
-        document.body.appendChild(script2);
-    })();
-
-**一定要先引入上面的部分，分两步走！！！**    
-**一定要先引入上面的部分，分两步走！！！**
 
 
 ## html2canvas插件本身有截图不清晰的问题，如果不需要放大，就用以下的格式
@@ -52,18 +33,19 @@
             link.style.display = "none";
             document.body.appendChild(link);
             //模拟单击事件，触发下载行为
-            $("#outputImg").trigger("click");
+            document.getElementById("outputImg").click();
         });
     })();
 
 
-## 如果需要放大，则用下面的格式
+## 如果需要放大，则用下面的格式（旧版不够清晰，现在已经好多了）
 
     ;(function(){
         var timeNow = new Date();
-        var bodyMarginLeft = parseInt($('body').css('marginLeft'));
-        var w = $("body").width() + bodyMarginLeft;  
-        var h = $("body").height();
+        var body = document.getElementsByTagName("body")[0];
+        var bodyMarginLeft = body.style.marginLeft;
+        var w = body.style.width + bodyMarginLeft;  
+        var h = body.style.height;
         /*要将canvas的宽高设置成容器宽高的2倍start*/
         var canvas = document.createElement("canvas");  
         canvas.width = w * 2;  
@@ -89,9 +71,9 @@
                 img.setAttribute("src",pic);
                 img.setAttribute("id","outputImg");
                 link.appendChild(img);
-                $("body").append(link);
+                document.body.appendChild(link);
                 //模拟单击事件，触发下载行为
-                $("#outputImg").trigger("click");
+                document.getElementById("outputImg").click();
             }
         });
     })();
