@@ -4,7 +4,7 @@
 
 	;(function(){
 		if(typeof(jQuery) != "undefined"){	
-	        console.log("no need to add jQuery again");
+	        	console.log("no need to add jQuery again");
 		}else{
 			var script = document.createElement("script");
 			script.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js");
