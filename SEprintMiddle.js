@@ -10,6 +10,9 @@
 
 ;(function(){
   //找到需要打印的KB文章，键盘上按End直接跳到最下方，点“打印文章”，然后在弹出的打印页面先取消，否则会打印出来不需要的页首和页脚
+  var docTitle = document.title;
+  docTitle = docTitle.substring(0,docTitle.length-13);
+  document.title = docTitle;
   var body = document.getElementsByTagName("body")[0];
   var firstDiv = body.children[0];
   //找到页首的两个部分
