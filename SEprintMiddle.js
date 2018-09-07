@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       Jenny HOU
-// @match        https://soldeazy.com/support/print.php?id=*
+// @match        https://www.soldeazy.com/support/print.php?id=*
 // @grant        none
 // ==/UserScript==
 
