@@ -183,7 +183,6 @@ $(document).ready(function() {
 			}
 		}
 		var newURL = currURLarr.join("&");
-		window.location.href = newURL;
 		//last searched SKU index
 		var last_SKU_index = Number($("#aptx_SKU_index").val());
 		sessionStorage.setItem("last_SKU_index", last_SKU_index);
