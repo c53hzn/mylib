@@ -11,9 +11,9 @@
 (function(){
 
 var aptx_css_str =
-	"#nav-icon{\r\n\tposition: fixed;\r\n\ttop: 4px;\r\n\tleft: 4px;\r\n\twidth: 30px;\r\n\theight: 30px;\r\n\tfont-size: 24px;\r\n\tline-height: 30px;\r\n\ttext-align: center;\r\n\tborder-radius: 5px;\r\n\tbackground: white;\r\n\tbox-shadow: 0px 1px 2px gray;\r\n\tcursor: pointer;\r\n\tz-index: 99999;\r\n}\r\n#nav-mask{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tbackground: gray;\r\n\topacity: 0.5;\r\n\tz-index: 998;\r\n\tdisplay: none;\r\n}\r\n#navbar{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: -240px;\r\n\twidth: 240px;\r\n\theight: 100%;\r\n\tborder-right: 2px solid silver;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tz-index: 999;\r\n}\r\n#navbar header{\r\n\tmargin: 0px 10px;\r\n}\r\n#aptx_txtarea{\r\n\tmargin: 10px auto;\r\n\twidth: 215px;\r\n\theight: 400px;\r\n\tresize: none;\r\n}\r\n#aptx_read{\r\n\tmargin: 0px auto auto 10px;\r\n}\r\n#aptx_box{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tright: -300px;\r\n\twidth: 300px;\r\n\theight: 100%;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tz-index: 99999;\r\n\toverflow: hidden;\r\n}\r\n#aptx_box p{\r\n\tmargin: 4px auto;\r\n}\r\n#aptx_table_div{\r\n\tmargin-top: 10px;\r\n\twidth: 100%;\r\n\theight: 500px;\r\n\toverflow: scroll;\r\n}\r\n#aptx_table_div table{\r\n\tborder-collapse: collapse;\r\n}\r\n#aptx_table_div th, #aptx_table_div td{\r\n\tfont-size: 12px;\r\n\tborder: 1px solid black;\r\n}\r\n.aptx_searched{\r\n\tcolor: lightgreen;\r\n\tfont-weight: bold;\r\n}\r\n#navbar button, #aptx_box button{\r\n\tpadding: 1px 6px;\r\n\tborder: 2px outset buttonface;\r\n}\r\n#gh-bt{z-index: 99999;\r\n\tborder: 1px solid gray}";
+	"#nav-icon{\r\n\tposition: fixed;\r\n\ttop: 4px;\r\n\tleft: 4px;\r\n\twidth: 30px;\r\n\theight: 30px;\r\n\tfont-size: 24px;\r\n\tline-height: 30px;\r\n\ttext-align: center;\r\n\tborder-radius: 5px;\r\n\tbackground: white;\r\n\tbox-shadow: 0px 1px 2px gray;\r\n\tcursor: pointer;\r\n\tz-index: 99999;\r\n}\r\n#nav-mask{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tbackground: gray;\r\n\topacity: 0.5;\r\n\tz-index: 998;\r\n\tdisplay: none;\r\n}\r\n#navbar{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: -240px;\r\n\twidth: 240px;\r\n\theight: 100%;\r\n\tborder-right: 2px solid silver;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tz-index: 999;\r\n}\r\n#navbar header{\r\n\tmargin: 0px 10px;\r\n}\r\n#aptx_txtarea{\r\n\tmargin: 10px auto;\r\n\twidth: 215px;\r\n\theight: 400px;\r\n\tresize: none;\r\n}\r\n#aptx_read{\r\n\tmargin: 0px auto auto 10px;\r\n}\r\n#aptx_box{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tright: -300px;\r\n\twidth: 300px;\r\n\theight: 100%;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tz-index: 99999;\r\n\toverflow: hidden;\r\n}\r\n#aptx_box p{\r\n\tmargin: 4px auto;\r\n}\r\n#aptx_table_div{\r\n\tmargin-top: 10px;\r\n\twidth: 100%;\r\n\theight: 500px;\r\n\toverflow: scroll;\r\n}\r\n#aptx_table_div table{\r\n\tborder-collapse: collapse;\r\n}\r\n#aptx_table_div th, #aptx_table_div td{\r\n\tfont-size: 12px;\r\n\tborder: 1px solid black;\r\n}\r\n.aptx_searched{\r\n\tcolor: lightgreen;\r\n\tfont-weight: bold;\r\n\tbackground: rgba(0,0,0,0.5)\r\n}\r\n#navbar button, #aptx_box button{\r\n\tpadding: 1px 6px;\r\n\tborder: 2px outset buttonface;\r\n}\r\n#gh-bt{z-index: 99999;\r\n\tborder: 1px solid gray}";
 var aptx_DOM_str =
-	'<div id=\"nav-icon\">\u2630<\/div>\r\n<div id=\"nav-mask\"><\/div>\r\n<nav id=\"navbar\">\r\n\t<header> \r\n\t\t<h2>Search in bulk<\/h2>\r\n\t\t<p>One product per line<\/p>\r\n\t<\/header>\r\n\t<textarea id=\"aptx_txtarea\"><\/textarea>\r\n\t<button id=\"aptx_read\">Start searching<\/button>\r\n<\/nav>\r\n\r\n<div id=\"aptx_box\">\r\n\t<div id=\"aptx_table_div\">\r\n\t\t<table id=\"aptx_table\">\r\n\t\t\t<tbody>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<th>Index<\/th>\r\n\t\t\t\t\t<th>Product<\/th>\r\n\t\t\t\t\t<th>item_ID_01<\/th>\r\n\t\t\t\t\t<th>price_01<\/th>\r\n\t\t\t\t\t<th>item_ID_02<\/th>\r\n\t\t\t\t\t<th>price_02<\/th>\r\n\t\t\t\t\t<th>item_ID_03<\/th>\r\n\t\t\t\t\t<th>price_03<\/th>\r\n\t\t\t\t\t<th>item_ID_04<\/th>\r\n\t\t\t\t\t<th>price_04<\/th>\r\n\t\t\t\t<\/tr>\r\n\t\t\t<\/tbody>\r\n\t\t<\/table>\r\n\t<\/div>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Current SKU index: <\/span>\r\n\t\t<input id=\"aptx_last_SKU_index\" disabled value=\"N\/A\" type=\"text\" style=\"width: 50px;\" \/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Next index to be searched: <\/span>\r\n\t\t<input type=\"number\" id=\"aptx_SKU_index\" style=\"width: 50px;\" min=\"1\" value=\"1\"\/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<button id=\"aptx_search\">Search<\/button>\r\n\t\t<button id=\"aptx_fill\">Fill<\/button>\r\n\t\t<button id=\"aptx_copy\">copy table<\/button>\r\n\t<\/p>\r\n<\/div>';
+	'<div id=\"nav-icon\">\u2630<\/div>\r\n<div id=\"nav-mask\"><\/div>\r\n<nav id=\"navbar\">\r\n\t<header> \r\n\t\t<h2>Search in bulk<\/h2>\r\n\t\t<p>One product per line<\/p>\r\n\t<\/header>\r\n\t<textarea id=\"aptx_txtarea\"><\/textarea>\r\n\t<button id=\"aptx_read\">Start searching<\/button>\r\n<\/nav>\r\n\r\n<div id=\"aptx_box\">\r\n\t<div id=\"aptx_table_div\">\r\n\t\t<table id=\"aptx_table\">\r\n\t\t\t<tbody>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<th>Index<\/th>\r\n\t\t\t\t\t<th>Product<\/th>\r\n\t\t\t\t\t<th>item_ID_01<\/th>\r\n\t\t\t\t\t<th>price_01<\/th>\r\n\t\t\t\t\t<th>item_ID_02<\/th>\r\n\t\t\t\t\t<th>price_02<\/th>\r\n\t\t\t\t\t<th>item_ID_03<\/th>\r\n\t\t\t\t\t<th>price_03<\/th>\r\n\t\t\t\t\t<th>item_ID_04<\/th>\r\n\t\t\t\t\t<th>price_04<\/th>\r\n\t\t\t\t<\/tr>\r\n\t\t\t<\/tbody>\r\n\t\t<\/table>\r\n\t<\/div>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Current index: <\/span>\r\n\t\t<input id=\"aptx_last_SKU_index\" disabled value=\"N\/A\" type=\"text\" style=\"width: 50px;\" \/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Index to be searched: <\/span>\r\n\t\t<input type=\"number\" id=\"aptx_SKU_index\" style=\"width: 50px;\" min=\"1\" value=\"1\"\/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<button id=\"aptx_search\">Search<\/button>\r\n\t\t<button id=\"aptx_fill\">Fill<\/button>\r\n\t\t<button id=\"aptx_copy\">copy table<\/button>\r\n\t<\/p>\r\n<\/div>';
 $(document).ready(function() {
 	var newStyle = document.createElement("style");
 	newStyle.innerHTML = aptx_css_str;
@@ -99,16 +99,12 @@ $(document).ready(function() {
 				k++;
 			}
 		}
-		var table_content = $("#aptx_table tbody").html();
-		var table_content2 = table_content.replace(/\t+/g, "\t");
-		var table_content3 = table_content2.replace(/<\/tr><tr>/g, "</tr>\n<tr>\n");
-		var table_content4 = table_content3.replace(/\t<\/tr>/g, "</tr>");
 		$("#aptx_SKU_index").val(1);
 		$("#aptx_last_SKU_index").val("N/A");
 		sessionStorage.setItem("SKU_index", 1);
-		sessionStorage.setItem("table_content", table_content4);
 		sessionStorage.setItem("SKUs", SKUs);
 		sessionStorage.removeItem("last_SKU_index");
+		saveTable();
 	});
 	/*解析SKU到表格结束*/
 
@@ -135,41 +131,48 @@ $(document).ready(function() {
 
 	/*搜索SKU开始*/
 	$("#aptx_search").click(function() {
-		//搜索...
-		var currURL = window.location.href;
-		var currURLarr = currURL.split("&");
-		var SKUs = sessionStorage.getItem("SKUs").split(",");
-		var currIndex = $("#aptx_SKU_index").val();
-		for(let i = 0; i < currURLarr.length; i++){
-			if(/_nkw=/.test(currURLarr[i])){
-				currURLarr[i] = "_nkw=" + SKUs[currIndex - 1];
-				break;
-			}
-		}
-		var newURL = currURLarr.join("&");
 		//last searched SKU index
 		var last_SKU_index = Number($("#aptx_SKU_index").val());
-		sessionStorage.setItem("last_SKU_index", last_SKU_index);
-		$("#aptx_last_SKU_index").val(last_SKU_index);
-		$("#aptx_table tr")
-			.eq(last_SKU_index)
-			.addClass("aptx_searched");
-		$("#aptx_table tr")
-			.eq(last_SKU_index)
-			.siblings()
-			.removeClass("aptx_searched");
-		//index++
 		var SKU_index = last_SKU_index + 1;
 		var SKUlen = $("#aptx_table tr").length - 1;
-		if (SKU_index <= SKUlen) {
-			$("#aptx_SKU_index").val(SKU_index);
-			sessionStorage.setItem("SKU_index", SKU_index);
-		} else {
+		/*
+		*理论上说已经不可以输入SKU index范围外的数字
+		*但还是可以用JavaScript强行更改SKU index
+		*此时强制SKU index跳到最大值，不执行搜索
+		*/
+		if(last_SKU_index > 0 && last_SKU_index <= SKUlen){
+			//搜索...
+			var currURL = window.location.href;
+			var currURLarr = currURL.split("&");
+			var SKUs = sessionStorage.getItem("SKUs").split(",");
+			var currIndex = $("#aptx_SKU_index").val();
+			for(let i = 0; i < currURLarr.length; i++){
+				if(/_nkw=/.test(currURLarr[i])){
+					currURLarr[i] = "_nkw=" + SKUs[currIndex - 1];
+					break;
+				}
+			}
+			var newURL = currURLarr.join("&");
+			
+			sessionStorage.setItem("last_SKU_index", last_SKU_index);
+			$("#aptx_last_SKU_index").val(last_SKU_index);
+			$("#aptx_table tr").eq(last_SKU_index).addClass("aptx_searched");
+			$("#aptx_table tr").eq(last_SKU_index).siblings().removeClass("aptx_searched");
+			//index++
+			
+			if (SKU_index <= SKUlen) {
+				$("#aptx_SKU_index").val(SKU_index);
+				sessionStorage.setItem("SKU_index", SKU_index);
+			} else {
+				$("#aptx_SKU_index").val(SKUlen);
+				sessionStorage.setItem("SKU_index", SKUlen);
+			}
+			//转到搜索结果页面
+			window.location.href = newURL;
+		}else{
 			$("#aptx_SKU_index").val(SKUlen);
 			sessionStorage.setItem("SKU_index", SKUlen);
-		}
-		//转到搜索结果页面
-		window.location.href = newURL;
+		}	
 	});
 	/*搜索SKU结束*/
 
@@ -189,6 +192,7 @@ $(document).ready(function() {
 			itemsInfo[i] = tempObj;
 		}
 		sessionStorage.setItem("itemsInfo", JSON.stringify(itemsInfo));
+		saveTable();
 	});
 	/*填充表格结束*/
 
@@ -205,9 +209,14 @@ $(document).ready(function() {
 		document.getElementsByTagName("body")[0].removeChild(txtArea);
 	});
 	/*复制表格到剪贴板结束*/
+
+	/*保存表格内容到sessionStorage*/
+	function saveTable(){
+		var table_content1 = $("#aptx_table tbody").html();
+		var table_content2 = table_content1.replace(/\t+/g, "\t");
+		var table_content3 = table_content2.replace(/<\/tr><tr>/g, "</tr>\n<tr>\n");
+		var table_content = table_content3.replace(/\t<\/tr>/g, "</tr>");
+		sessionStorage.setItem("table_content", table_content);
+	}
 });
-
-
-
-
 })();
