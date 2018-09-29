@@ -182,7 +182,7 @@ $(document).ready(function() {
 			let itemTitle = $(items[i]).children("h3.lvtitle").children("a").html();
 			let itemPicURLtemp = $(items[i]).children("div.lvpic").children(".lvpicinner").children("a").children("img").attr("src");
 			let itemPicURLarr = itemPicURLtemp.split("/");
-			let itemPicURL = "https://i.ebayimg.com/images/g/" + itemPicURLarr[5] + "/s-l1600.jpg";
+			let itemPicURL = "https://i.ebayimg.com/images/g/" + itemPicURLarr[6] + "/s-l1600.jpg";
 			let itemPriceTemp = $(items[i]).children("ul.lvprices").children("li.lvprice").children("span").text();
 			let itemPrice = itemPriceTemp.replace(/(\$|\t|\n)/g,"");
 			let tempObj = {"id":itemId, "title":itemTitle, "picture":itemPicURL, "price":itemPrice};
