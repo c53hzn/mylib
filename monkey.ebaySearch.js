@@ -180,7 +180,9 @@ $(document).ready(function() {
 		for(let i = 0; i < items.length; i++){
 			let itemId = $(items[i]).attr("listingid");
 			let itemTitle = $(items[i]).children("h3.lvtitle").children("a").html();
-			let itemPicURL = $(items[i]).children("div.lvpic").children(".lvpicinner").children("a").children("img").attr("src");
+			let itemPicURLtemp = $(items[i]).children("div.lvpic").children(".lvpicinner").children("a").children("img").attr("src");
+			let itemPicURLarr = itemPicURLtemp.split("/");
+			let itemPicURL = "https://i.ebayimg.com/images/g/" + itemPicURLarr[5] + "/s-l1600.jpg";
 			let itemPriceTemp = $(items[i]).children("ul.lvprices").children("li.lvprice").children("span").text();
 			let itemPrice = itemPriceTemp.replace(/(\$|\t|\n)/g,"");
 			let tempObj = {"id":itemId, "title":itemTitle, "picture":itemPicURL, "price":itemPrice};
