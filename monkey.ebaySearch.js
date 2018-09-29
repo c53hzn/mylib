@@ -190,7 +190,11 @@ $(document).ready(function() {
 				let itemPicURLtemp = $(items[i]).children("div.lvpic").children(".lvpicinner").children("a").children("img").attr("src");
 				let itemPicURLarr = itemPicURLtemp.split("/");
 				let itemPicURL = "https://i.ebayimg.com/images/g/" + itemPicURLarr[6] + "/s-l1600.jpg";
-				let itemPriceTemp = $(items[i]).children("ul.lvprices").children("li.lvprice").children("span").text();
+				let itemPriceDOM = $(items[i]).children("ul.lvprices").children("li.lvprice").children("span")[0];
+				let itemPriceTemp = itemPriceDOM.childNodes[0].wholeText;
+				if(!/\d+/.test(itemPriceTemp)){
+					itemPriceTemp = itemPriceDOM.innerText;
+				}
 				let itemPrice = itemPriceTemp.replace(/(\$|\t|\n)/g,"");
 				let tempObj = {"id":itemId, "title":itemTitle, "picture":itemPicURL, "price":itemPrice};
 				itemsInfo[i] = tempObj;
@@ -249,6 +253,8 @@ $(document).ready(function() {
 		setTimeout(function(){
 			$("#aptx_fill").trigger("click");
 		},3000);
+		clearTimeout(search_timer);
+		sessionStorage.removeItem("aptx_auto_search");
 	}
 	/*自动搜索SKU并填充到表格，间隔5秒执行下一个SKU*/
 
