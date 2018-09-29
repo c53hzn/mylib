@@ -11,7 +11,7 @@
 (function(){
 
 var aptx_css_str =
-	"#nav-icon{\r\n\tposition: fixed;\r\n\ttop: 4px;\r\n\tleft: 4px;\r\n\twidth: 30px;\r\n\theight: 30px;\r\n\tfont-size: 24px;\r\n\tline-height: 30px;\r\n\ttext-align: center;\r\n\tborder-radius: 5px;\r\n\tbackground: white;\r\n\tbox-shadow: 0px 1px 2px gray;\r\n\tcursor: pointer;\r\n\tz-index: 99999;\r\n}\r\n#nav-mask{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tbackground: gray;\r\n\topacity: 0.5;\r\n\tz-index: 998;\r\n\tdisplay: none;\r\n}\r\n#navbar{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: -240px;\r\n\twidth: 240px;\r\n\theight: 100%;\r\n\tborder-right: 2px solid silver;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tz-index: 999;\r\n}\r\n#navbar header{\r\n\tmargin: 0px 10px;\r\n}\r\n#aptx_txtarea{\r\n\tmargin: 10px auto;\r\n\twidth: 215px;\r\n\theight: 400px;\r\n\tresize: none;\r\n}\r\n#aptx_read{\r\n\tmargin: 0px auto auto 10px;\r\n}\r\n#aptx_box{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tright: -300px;\r\n\twidth: 300px;\r\n\theight: 100%;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tz-index: 99999;\r\n\toverflow: hidden;\r\n}\r\n#aptx_box p{\r\n\tmargin: 4px auto;\r\n}\r\n#aptx_table_div{\r\n\tmargin-top: 10px;\r\n\twidth: 100%;\r\n\theight: 500px;\r\n\toverflow: scroll;\r\n}\r\n#aptx_table_div table{\r\n\tborder-collapse: collapse;\r\n}\r\n#aptx_table_div th, #aptx_table_div td{\r\n\tfont-size: 12px;\r\n\tborder: 1px solid black;\r\n}\r\n.aptx_searched{\r\n\tcolor: lightgreen;\r\n\tfont-weight: bold;\r\n}\r\n#navbar button, #aptx_box button{\r\n\tpadding: 1px 6px;\r\n\tborder: 2px outset buttonface;\r\n}";
+	"#nav-icon{\r\n\tposition: fixed;\r\n\ttop: 4px;\r\n\tleft: 4px;\r\n\twidth: 30px;\r\n\theight: 30px;\r\n\tfont-size: 24px;\r\n\tline-height: 30px;\r\n\ttext-align: center;\r\n\tborder-radius: 5px;\r\n\tbackground: white;\r\n\tbox-shadow: 0px 1px 2px gray;\r\n\tcursor: pointer;\r\n\tz-index: 99999;\r\n}\r\n#nav-mask{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tbackground: gray;\r\n\topacity: 0.5;\r\n\tz-index: 998;\r\n\tdisplay: none;\r\n}\r\n#navbar{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: -240px;\r\n\twidth: 240px;\r\n\theight: 100%;\r\n\tborder-right: 2px solid silver;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tz-index: 999;\r\n}\r\n#navbar header{\r\n\tmargin: 0px 10px;\r\n}\r\n#aptx_txtarea{\r\n\tmargin: 10px auto;\r\n\twidth: 215px;\r\n\theight: 400px;\r\n\tresize: none;\r\n}\r\n#aptx_read{\r\n\tmargin: 0px auto auto 10px;\r\n}\r\n#aptx_box{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tright: -300px;\r\n\twidth: 300px;\r\n\theight: 100%;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tz-index: 99999;\r\n\toverflow: hidden;\r\n}\r\n#aptx_box p{\r\n\tmargin: 4px auto;\r\n}\r\n#aptx_table_div{\r\n\tmargin-top: 10px;\r\n\twidth: 100%;\r\n\theight: 500px;\r\n\toverflow: scroll;\r\n}\r\n#aptx_table_div table{\r\n\tborder-collapse: collapse;\r\n}\r\n#aptx_table_div th, #aptx_table_div td{\r\n\tfont-size: 12px;\r\n\tborder: 1px solid black;\r\n}\r\n.aptx_searched{\r\n\tcolor: lightgreen;\r\n\tfont-weight: bold;\r\n}\r\n#navbar button, #aptx_box button{\r\n\tpadding: 1px 6px;\r\n\tborder: 2px outset buttonface;\r\n}\r\n#gh-bt{z-index: 99999;}";
 var aptx_DOM_str =
 	'<div id=\"nav-icon\">\u2630<\/div>\r\n<div id=\"nav-mask\"><\/div>\r\n<nav id=\"navbar\">\r\n\t<header> \r\n\t\t<h2>Search in bulk<\/h2>\r\n\t\t<p>One product per line<\/p>\r\n\t<\/header>\r\n\t<textarea id=\"aptx_txtarea\"><\/textarea>\r\n\t<button id=\"aptx_read\">Start searching<\/button>\r\n<\/nav>\r\n\r\n<div id=\"aptx_box\">\r\n\t<div id=\"aptx_table_div\">\r\n\t\t<table id=\"aptx_table\">\r\n\t\t\t<tbody>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<th>Index<\/th>\r\n\t\t\t\t\t<th>Product<\/th>\r\n\t\t\t\t\t<th>item_ID_01<\/th>\r\n\t\t\t\t\t<th>price_01<\/th>\r\n\t\t\t\t\t<th>item_ID_02<\/th>\r\n\t\t\t\t\t<th>price_02<\/th>\r\n\t\t\t\t\t<th>item_ID_03<\/th>\r\n\t\t\t\t\t<th>price_03<\/th>\r\n\t\t\t\t\t<th>item_ID_04<\/th>\r\n\t\t\t\t\t<th>price_04<\/th>\r\n\t\t\t\t<\/tr>\r\n\t\t\t<\/tbody>\r\n\t\t<\/table>\r\n\t<\/div>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Current SKU index: <\/span>\r\n\t\t<input id=\"aptx_last_SKU_index\" disabled value=\"N\/A\" type=\"text\" style=\"width: 50px;\" \/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Next index to be searched: <\/span>\r\n\t\t<input type=\"number\" id=\"aptx_SKU_index\" style=\"width: 50px;\" min=\"1\" value=\"1\"\/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<button id=\"aptx_search\">Search<\/button>\r\n\t\t<button id=\"aptx_fill\">Fill<\/button>\r\n\t\t<button id=\"aptx_copy\">copy table<\/button>\r\n\t<\/p>\r\n<\/div>';
 $(document).ready(function() {
@@ -46,46 +46,21 @@ $(document).ready(function() {
 	//刷新页面时刚才搜过的SKU所在行绿色加粗
 	if (sessionStorage.getItem("last_SKU_index")) {
 		let last_SKU_index = sessionStorage.getItem("last_SKU_index");
-		$("#aptx_table tr")
-			.eq(last_SKU_index)
-			.addClass("aptx_searched");
-		$("#aptx_table tr")
-			.eq(last_SKU_index)
-			.siblings()
-			.removeClass("aptx_searched");
+		$("#aptx_table tr").eq(last_SKU_index).addClass("aptx_searched");
+		$("#aptx_table tr").eq(last_SKU_index).siblings().removeClass("aptx_searched");
 		$("#aptx_last_SKU_index").val(sessionStorage.getItem("last_SKU_index"));
 	}
 
 	//给左上角按钮添加打开和关闭功能区事件
 	$("#nav-icon").click(function() {
 		if ($("#navbar").position().left == -240) {
-			$("#navbar").animate(
-				{
-					left: "0"
-				},
-				"slow"
-			);
-			$("#aptx_box").animate(
-				{
-					right: "0"
-				},
-				"slow"
-			);
+			$("#navbar").animate({left: "0"},"slow");
+			$("#aptx_box").animate({right: "0"},"slow");
 			$("#nav-mask").css("display", "block");
 			sessionStorage.setItem("lastSearchExist", "bbb");
 		} else {
-			$("#navbar").animate(
-				{
-					left: "-240"
-				},
-				"slow"
-			);
-			$("#aptx_box").animate(
-				{
-					right: "-300"
-				},
-				"slow"
-			);
+			$("#navbar").animate({left: "-240"},"slow");
+			$("#aptx_box").animate({right: "-300"},"slow");
 			$("#nav-mask").css("display", "none");
 			sessionStorage.removeItem("lastSearchExist");
 		}
@@ -93,17 +68,8 @@ $(document).ready(function() {
 
 	//给遮罩层添加关闭功能区事件
 	$("#nav-mask").click(function() {
-		$("#navbar").animate(
-			{
-				left: "-240"
-			},
-			"slow"
-		);
-		$("#aptx_box").animate(
-			{
-				right: "-300"
-			},
-			"slow"
+		$("#navbar").animate({left: "-240"},"slow");
+		$("#aptx_box").animate({right: "-300"},"slow"
 		);
 		$("#nav-mask").css("display", "none");
 		sessionStorage.removeItem("lastSearchExist");
@@ -112,9 +78,7 @@ $(document).ready(function() {
 	/*解析SKU到表格开始*/
 	$("#aptx_read").click(function() {
 		$("#aptx_last_SKU_index").val("N/A");
-		var thead = $("#aptx_table tbody")
-			.children()
-			.eq(0);
+		var thead = $("#aptx_table tbody").children().eq(0);
 		$("#aptx_table tbody").html("");
 		$("#aptx_table tbody").append(thead);
 		var SKUstr = $("#aptx_txtarea").val();
@@ -208,6 +172,23 @@ $(document).ready(function() {
 		window.location.href = newURL;
 	});
 	/*搜索SKU结束*/
+
+	/*填充表格开始*/
+	$("#aptx_fill").click(function(){
+		var items = $("#ListViewInner").children("li");
+		var itemsInfo = {};
+		for(let i = 0; i < items.length; i++){
+			let itemId = $(items[i]).attr("listingid");
+			let itemTitle = $(items[i]).children("h3.lvtitle").children("a").html();
+			let itemPicURL = $(items[i]).children("div.lvpic").children(".lvpicinner").children("a").children("img").attr("src");
+			let itemPriceTemp = $(items[i]).children("ul.lvprices").children("li.lvprice").children("span").text();
+			let itemPrice = itemPriceTemp.replace(/(\$|\t|\n)/g,"");
+			let tempObj = {"id":itemId, "title":itemTitle, "picture":itemPicURL, "price":itemPrice};
+			itemsInfo[i] = tempObj;
+		}
+		sessionStorage.setItem("itemsInfo", JSON.stringify(itemsInfo));
+	});
+	/*填充表格结束*/
 
 	/*复制表格到剪贴板开始*/
 	$("#aptx_copy").click(function() {
