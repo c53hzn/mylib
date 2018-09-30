@@ -13,7 +13,7 @@
 var aptx_css_str =
 	"#nav-icon{\r\n\tposition: fixed;\r\n\ttop: 4px;\r\n\tleft: 4px;\r\n\twidth: 30px;\r\n\theight: 30px;\r\n\tfont-size: 24px;\r\n\tline-height: 30px;\r\n\ttext-align: center;\r\n\tborder-radius: 5px;\r\n\tbackground: white;\r\n\tbox-shadow: 0px 1px 2px gray;\r\n\tcursor: pointer;\r\n\tz-index: 99999;\r\n}\r\n#nav-mask{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tbackground: gray;\r\n\topacity: 0.5;\r\n\tz-index: 998;\r\n\tdisplay: none;\r\n}\r\n#navbar{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tleft: -240px;\r\n\twidth: 240px;\r\n\theight: 100%;\r\n\tborder-right: 2px solid silver;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tz-index: 999;\r\n}\r\n#navbar header{\r\n\tmargin: 0px 10px;\r\n}\r\n#aptx_txtarea{\r\n\tmargin: 10px auto;\r\n\twidth: 215px;\r\n\theight: 400px;\r\n\tresize: none;\r\n}\r\n#aptx_read{\r\n\tmargin: 0px auto auto 10px;\r\n}\r\n#aptx_box{\r\n\tposition: fixed;\r\n\ttop: 0px;\r\n\tright: -300px;\r\n\tpadding-left: 10px;\r\n\twidth: 300px;\r\n\theight: 100%;\r\n\tbackground: rgba(255,255,255,0.75);\r\n\tz-index: 99999;\r\n\toverflow: hidden;\r\n}\r\n#aptx_box p{\r\n\tmargin: 4px auto;\r\n}\r\n#aptx_table_div{\r\n\tmargin-top: 10px;\r\n\twidth: 100%;\r\n\theight: 500px;\r\n\toverflow: scroll;\r\n}\r\n#aptx_table_div table{\r\n\tborder-collapse: collapse;\r\n}\r\n#aptx_table_div th, #aptx_table_div td{\r\n\tfont-size: 12px;\r\n\tborder: 1px solid black;\r\n}\r\n.aptx_searched{\r\n\tcolor: lightgreen;\r\n\tfont-weight: bold;\r\n\tbackground: rgba(0,0,0,0.5)\r\n}\r\n#navbar button, #aptx_box button{\r\n\tpadding: 1px 6px;\r\n\tborder: 2px outset buttonface;\r\n}\r\n#gh-bt{z-index: 99999;\r\n\tborder: 1px solid gray}";
 var aptx_DOM_str =
-	'<div id=\"nav-icon\">\u2630<\/div>\r\n<div id=\"nav-mask\"><\/div>\r\n<nav id=\"navbar\">\r\n\t<header> \r\n\t\t<p>&nbsp;<\/p>\r\n\t\t<h2>Search in bulk<\/h2>\r\n\t\t<p>One product per line<\/p>\r\n\t<\/header>\r\n\t<textarea id=\"aptx_txtarea\"><\/textarea>\r\n\t<button id=\"aptx_read\">Start searching<\/button>\r\n<\/nav>\r\n\r\n<div id=\"aptx_box\">\r\n\t<div id=\"aptx_table_div\">\r\n\t\t<table id=\"aptx_table\">\r\n\t\t\t<tbody>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<th>Index<\/th>\r\n\t\t\t\t\t<th>Product<\/th>\r\n\t\t\t\t\t<th>item_ID_01<\/th>\r\n\t\t\t\t\t<th>price_01<\/th>\r\n\t\t\t\t\t<th>item_ID_02<\/th>\r\n\t\t\t\t\t<th>price_02<\/th>\r\n\t\t\t\t\t<th>item_ID_03<\/th>\r\n\t\t\t\t\t<th>price_03<\/th>\r\n\t\t\t\t\t<th>item_ID_04<\/th>\r\n\t\t\t\t\t<th>price_04<\/th>\r\n\t\t\t\t<\/tr>\r\n\t\t\t<\/tbody>\r\n\t\t<\/table>\r\n\t<\/div>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Current index: <\/span>\r\n\t\t<input id=\"aptx_last_SKU_index\" disabled value=\"N\/A\" type=\"text\" style=\"width: 50px;\" \/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Index to be searched: <\/span>\r\n\t\t<input type=\"number\" id=\"aptx_SKU_index\" style=\"width: 50px;\" min=\"1\" value=\"1\"\/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<button id=\"aptx_search\">Search<\/button>\r\n\t\t<button id=\"aptx_fill\">Fill<\/button>\r\n\t\t<button id=\"aptx_copy\">copy table<\/button>\r\n\t<\/p>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<button id=\"aptx_auto_search\">Auto search and fill<\/button>\r\n\t\t<button id=\"aptx_stop\">Stop<\/button>\r\n\t<\/p>\r\n<\/div>';
+	'<div id=\"nav-icon\">\u2630<\/div>\r\n<div id=\"nav-mask\"><\/div>\r\n<nav id=\"navbar\">\r\n\t<header> \r\n\t\t<p>&nbsp;<\/p>\r\n\t\t<h2>Search in bulk<\/h2>\r\n\t\t<p>One product per line<\/p>\r\n\t<\/header>\r\n\t<textarea id=\"aptx_txtarea\"><\/textarea>\r\n\t<button id=\"aptx_read\">Start searching<\/button>\r\n<\/nav>\r\n\r\n<div id=\"aptx_box\">\r\n\t<div id=\"aptx_table_div\">\r\n\t\t<table id=\"aptx_table\">\r\n\t\t\t<tbody>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<th>Index<\/th>\r\n\t\t\t\t\t<th>Product<\/th>\r\n\t\t\t\t\t<th>item_ID_01<\/th>\r\n\t\t\t\t\t<th>price_01<\/th>\r\n\t\t\t\t\t<th>item_ID_02<\/th>\r\n\t\t\t\t\t<th>price_02<\/th>\r\n\t\t\t\t\t<th>item_ID_03<\/th>\r\n\t\t\t\t\t<th>price_03<\/th>\r\n\t\t\t\t\t<th>item_ID_04<\/th>\r\n\t\t\t\t\t<th>price_04<\/th>\r\n\t\t\t\t<\/tr>\r\n\t\t\t<\/tbody>\r\n\t\t<\/table>\r\n\t<\/div>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Current index: <\/span>\r\n\t\t<input id=\"aptx_last_SKU_index\" disabled value=\"N\/A\" type=\"text\" style=\"width: 50px;\" \/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"font-size: 12px;\">Search index: <\/span>\r\n\t\t<input type=\"number\" id=\"aptx_SKU_index\" style=\"width: 50px;\" min=\"1\" value=\"1\"\/>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<button id=\"aptx_search\">Search<\/button>\r\n\t\t<button id=\"aptx_fill\">Fill<\/button>\r\n\t\t<button id=\"aptx_copy\">copy table<\/button>\r\n\t<\/p>\r\n\t<\/p>\r\n\t<p>\r\n\t\t<button id=\"aptx_auto_search\">Auto search and fill<\/button>\r\n\t\t<button id=\"aptx_stop\">Stop<\/button>\r\n\t<\/p>\r\n<\/div>';
 $(document).ready(function() {
 	var newStyle = document.createElement("style");
 	newStyle.innerHTML = aptx_css_str;
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	if (sessionStorage.getItem("SKUstr")) {
 		$("#aptx_txtarea").val(sessionStorage.getItem("SKUstr"));
 	}
-	$("#aptx_txtarea").on("keyup", function() {
+	$("#aptx_txtarea").on("input", function() {
 		var SKUstr = $(this).val();
 		sessionStorage.setItem("SKUstr", SKUstr);
 	});
@@ -140,7 +140,7 @@ $(document).ready(function() {
 		*但还是可以用JavaScript强行更改SKU index
 		*此时强制SKU index跳到最大值，不执行搜索
 		*/
-		if(last_SKU_index > 0 && last_SKU_index <= SKUlen){
+		if (last_SKU_index > 0 && last_SKU_index <= SKUlen) {
 			//搜索...
 			var currURL = window.location.href;
 			var currURLarr = currURL.split("&");
@@ -148,7 +148,7 @@ $(document).ready(function() {
 			var currIndex = $("#aptx_SKU_index").val();
 			for(let i = 0; i < currURLarr.length; i++){
 				if(/_nkw=/.test(currURLarr[i])){
-					currURLarr[i] = "_nkw=" + SKUs[currIndex - 1];
+					currURLarr[i] = "_nkw=" + escape(SKUs[currIndex - 1]);
 					break;
 				}
 			}
@@ -169,6 +169,8 @@ $(document).ready(function() {
 			}
 			//转到搜索结果页面
 			window.location.href = newURL;
+		}else if(SKUlen < 1){
+			return;
 		}else{
 			$("#aptx_SKU_index").val(SKUlen);
 			sessionStorage.setItem("SKU_index", SKUlen);
@@ -234,13 +236,22 @@ $(document).ready(function() {
 		sessionStorage.setItem("table_content", table_content);
 	}
 
-	/*自动搜索SKU并填充到表格，间隔5秒执行下一个SKU*/
+	/*自动搜索SKU并填充到表格，间隔2秒执行下一个SKU - 开始*/
 	var search_timer;
 	$("#aptx_auto_search").click(function(){
-		//在sessionStorage储存一个识别自动搜索的变量
-		sessionStorage.setItem("aptx_auto_search","true");
-		//触发搜索即可
-		$("#aptx_search").trigger("click");
+		//last searched SKU index
+		var last_SKU_index = Number($("#aptx_SKU_index").val());
+		var SKU_index = last_SKU_index + 1;
+		var SKUlen = $("#aptx_table tr").length - 1;
+		/*
+		*有SKU的情况下才执行自动搜索
+		*/
+		if(last_SKU_index > 0 && last_SKU_index <= SKUlen){
+			//在sessionStorage储存一个识别自动搜索的变量
+			sessionStorage.setItem("aptx_auto_search","true");
+			//触发搜索即可
+			$("#aptx_search").trigger("click");
+		}
 	});
 	var isAutoSearchPresent = sessionStorage.getItem("aptx_auto_search");
 	var isSearchEnded = $("#aptx_last_SKU_index").val() == $("#aptx_table tr").length - 1;
@@ -248,15 +259,15 @@ $(document).ready(function() {
 		search_timer = setTimeout(function(){
 			$("#aptx_fill").trigger("click");
 			$("#aptx_search").trigger("click");
-		},3000);
+		},2000);
 	}else if(isSearchEnded){
 		setTimeout(function(){
 			$("#aptx_fill").trigger("click");
-		},3000);
+		},2000);
 		clearTimeout(search_timer);
 		sessionStorage.removeItem("aptx_auto_search");
 	}
-	/*自动搜索SKU并填充到表格，间隔5秒执行下一个SKU*/
+	/*自动搜索SKU并填充到表格，间隔2秒执行下一个SKU - 结束*/
 
 	/*清除自动搜索的定时器开始*/
 	$("#aptx_stop").click(function(){
