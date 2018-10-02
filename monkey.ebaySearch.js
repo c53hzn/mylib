@@ -230,7 +230,7 @@ $(document).ready(function() {
 			var k = 1;
 			var SKUs = [];
 			for (let i = 0; i < SKUarr.length; i++) {
-				if (SKUarr[i]) {
+				if (/(\d|\w)/.test(SKUarr[i])) {
 					let tr = document.createElement("tr");
 					let tempStr = "\t<td>" + k + "</td>\n\t<td>" + SKUarr[i] + "</td>\n";
 					for (let j = 0; j < $("#aptx_table th").length - 2; j++) {
