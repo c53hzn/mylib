@@ -12,8 +12,10 @@ A collection of JavaScript libraries, user guide included.
 
 5. [print webpage file name in console](https://www.houzhenni.com/mylib/pagefilename)
 
-6. [print without header and footer](https://www.houzhenni.com/mylib/SEprintMiddle.js)
+6. [print without header and footer](https://www.houzhenni.com/mylib/monkey.printMiddle.js)
 
 7. [add jQuery if needed](https://www.houzhenni.com/mylib/addjquery)
 
-8. [check eBay fitment page for update](https://www.houzhenni.com/mylib/eBayCheckFitment.js)
+8. [check eBay fitment page for update](https://www.houzhenni.com/mylib/monkey.checkFitment.js)
+
+9. [extract eBay search result on a list basis](https://www.houzhenni.com/mylib/monkey.ebaySearch.js)
