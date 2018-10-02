@@ -52,19 +52,19 @@ $(document).ready(function() {
 	if (sessionStorage.getItem("search_profile")) {
 		let search_profile = JSON.parse(sessionStorage.getItem("search_profile"));
 		if (search_profile.item_ID) {
-			$("#aptx_sch_id").attr("checked","true");
+			$("#aptx_sch_id").prop("checked",true);
 		}
 		if (search_profile.title) {
-			$("#aptx_sch_title").attr("checked","true");
+			$("#aptx_sch_title").prop("checked",true);
 		}
 		if (search_profile.price) {
-			$("#aptx_sch_price").attr("checked","true");
+			$("#aptx_sch_price").prop("checked",true);
 		}
 		if (search_profile.picURL) {
-			$("#aptx_sch_picURL").attr("checked","true");
+			$("#aptx_sch_picURL").prop("checked",true);
 		}
 		if (search_profile.picIMG) {
-			$("#aptx_sch_picIMG").attr("checked","true");
+			$("#aptx_sch_picIMG").prop("checked",true);
 		}
 		$("#aptx_sch_num").val(search_profile.num_of_item);
 	}
@@ -72,19 +72,19 @@ $(document).ready(function() {
 	if (sessionStorage.getItem("export_profile")) {
 		let export_profile = JSON.parse(sessionStorage.getItem("export_profile"));
 		if (export_profile.item_ID) {
-			$("#aptx_res_id").attr("checked","true");
+			$("#aptx_res_id").prop("checked",true);
 		}
 		if (export_profile.title) {
-			$("#aptx_res_title").attr("checked","true");
+			$("#aptx_res_title").prop("checked",true);
 		}
 		if (export_profile.price) {
-			$("#aptx_res_price").attr("checked","true");
+			$("#aptx_res_price").prop("checked",true);
 		}
 		if (export_profile.picURL) {
-			$("#aptx_res_picURL").attr("checked","true");
+			$("#aptx_res_picURL").prop("checked",true);
 		}
 		if (export_profile.picIMG) {
-			$("#aptx_res_picIMG").attr("checked","true");
+			$("#aptx_res_picIMG").prop("checked",true);
 		}
 		$("#aptx_res_num").val(export_profile.num_of_item);
 	}
