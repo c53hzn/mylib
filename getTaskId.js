@@ -31,13 +31,13 @@ function getTaskId (R_ID) {
 						console.log(String(j));
 					}
 					j++;
-					iterateTasks (taskIds[j]);
+					iterateTasks (taskIds[j - 1]);
 				},
 				error: function (xhr, status, err) {
 					console.log(j + ": " + task_ID);
 					console.log(err);
 					j++;
-					iterateTasks (taskIds[j]);
+					iterateTasks (taskIds[j - 1]);
 				}
 			});
 		} else {
