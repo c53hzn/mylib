@@ -1,0 +1,48 @@
+function getTaskId (R_ID) {
+	var baseURL = window.location.href;
+	var API = baseURL + "/result?job_id=";
+	var taskIds = [];
+	var taskResults = $(".listingtable tr");
+	for (let i = 1; i < taskResults.length; i++) {
+		let temp = taskResults[i].children[1].innerText;
+		taskIds.push(temp);
+	}
+	var j = 1;
+	function iterateTasks (task_ID) {
+		if (j <= taskIds.length) {
+			$.ajax({
+				type: "GET",
+				url: API + task_ID,
+				dataType: "html",
+				success: function(data){
+					var isRIDfound = false;
+					var div = document.createElement("div");
+					div.innerHTML = data;
+					var tds = div.getElementsByTagName("td");
+					for (let k = 0; k < tds.length; k++) {
+						let content = tds[k].innerText;
+						if (content == R_ID) {
+							isRIDfound = true;
+						}
+					}
+					if (isRIDfound) {
+						console.log(j + ": " + task_ID);
+					} else {
+						console.log(String(j));
+					}
+					j++;
+					iterateTasks (taskIds[j]);
+				},
+				error: function (xhr, status, err) {
+					console.log(j + ": " + task_ID);
+					console.log(err);
+					j++;
+					iterateTasks (taskIds[j]);
+				}
+			});
+		} else {
+			return;
+		}
+	}
+	iterateTasks (taskIds[j]);
+}
