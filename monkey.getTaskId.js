@@ -5,12 +5,12 @@
 // @description  try to take over the world!
 // @author       You
 // @match        https://www.soldeazy.com/ssl/soldeazy/queue
-// @match        https://auto.soldeazy.com/ssl/soldeazy/queue
+// @match        https://auto.soldeazy.com/app/soldeazy/queue
 // @grant        none
 // ==/UserScript==
 
 (function(w) {
-w.getTaskId = function(R_ID) {
+w.getTaskId = function(key_word) {
 	var baseURL = window.location.href;
 	var API = baseURL + "/result?job_id=";
 	var taskIds = [];
@@ -33,7 +33,7 @@ w.getTaskId = function(R_ID) {
 					var tds = div.getElementsByTagName("td");
 					for (let k = 0; k < tds.length; k++) {
 						let content = tds[k].innerText;
-						if (content == R_ID) {
+						if (content.indedOf(key_word) != -1) {
 							isRIDfound = true;
 						}
 					}
@@ -46,7 +46,9 @@ w.getTaskId = function(R_ID) {
 					iterateTasks (taskIds[j - 1]);
 				},
 				error: function (xhr, status, err) {
-					console.log(j + ": " + task_ID);
+					console.log(j + ": " + task_ID + "出错了，自己点开看吧");
+                    console.log(xhr);
+                    console.log(status);
 					console.log(err);
 					j++;
 					iterateTasks (taskIds[j - 1]);
