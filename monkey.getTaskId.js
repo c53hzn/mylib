@@ -33,7 +33,7 @@ w.getTaskId = function(key_word) {
 					var tds = div.getElementsByTagName("td");
 					for (let k = 0; k < tds.length; k++) {
 						let content = tds[k].innerText;
-						if (content.indedOf(key_word) != -1) {
+						if (content.indexOf(key_word) != -1) {
 							isRIDfound = true;
 						}
 					}
