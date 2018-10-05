@@ -9,8 +9,8 @@
 // @grant        none
 // ==/UserScript==
 
-(function(window) {
-this.getTaskId = function(R_ID) {
+(function(w) {
+w.getTaskId = function(R_ID) {
 	var baseURL = window.location.href;
 	var API = baseURL + "/result?job_id=";
 	var taskIds = [];
