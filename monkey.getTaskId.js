@@ -52,9 +52,6 @@
 					},
 					error: function (xhr, status, err) {
 						console.log(j + ": " + task_ID + "出错了，自己点开看吧");
-	                    console.log(xhr);
-	                    console.log(status);
-						console.log(err);
 						j++;
 						if (j > taskIds.length) {
 							isSearching = false;
