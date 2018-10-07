@@ -23,7 +23,9 @@
 		var j = 1;
 		isSearching = true;
 		function iterateTasks(task_ID) {
-			if (j <= taskIds.length && isSearching) {
+			if (j > taskIds.length) {
+				isSearching = false;
+			} else if (j <= taskIds.length && isSearching) {
 				$.ajax({
 					type: "GET",
 					url: API + task_ID,
@@ -45,17 +47,11 @@
 							console.log(String(j));
 						}
 						j++;
-						if (j > taskIds.length) {
-							isSearching = false;
-						}
 						iterateTasks(taskIds[j - 1]);
 					},
 					error: function (xhr, status, err) {
 						console.log(j + ": " + task_ID + "出错了，自己点开看吧");
 						j++;
-						if (j > taskIds.length) {
-							isSearching = false;
-						}
 						iterateTasks(taskIds[j - 1]);
 					}
 				});
