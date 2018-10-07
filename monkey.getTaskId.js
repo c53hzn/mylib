@@ -12,6 +12,10 @@
 (function(w) {
 	var isSearching = false;
 	w.getTaskId = function(key_word) {
+		if (typeof key_word != "string") {
+			throw Error("key_word must be double quoted!!!");
+			return;
+		}
 		var baseURL = window.location.href;
 		var API = baseURL + "/result?job_id=";
 		var taskIds = [];
