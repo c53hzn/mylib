@@ -25,6 +25,7 @@
 		function iterateTasks(task_ID) {
 			if (j > taskIds.length) {
 				isSearching = false;
+				return;
 			} else if (j <= taskIds.length && isSearching) {
 				$.ajax({
 					type: "GET",
@@ -59,7 +60,7 @@
 				return;
 			}
 		}
-		iterateTasks(taskIds[j]);
+		iterateTasks(taskIds[j - 1]);
 	}
 	w.getTaskId_stop = function() {
 		isSearching = false;
