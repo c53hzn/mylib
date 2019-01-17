@@ -26,7 +26,7 @@
 
 	document.getElementsByTagName("body")[0].appendChild(txtArea);
     txtArea.style = "position: fixed; bottom: 0px; left: 0px; right: 0px; margin: 0px auto; width: 300px; height: 100px;";
-	txtArea.innerText = str;
+	txtArea.value = str;
 	txtArea.focus();
 	txtArea.select();
 	document.execCommand("copy");
