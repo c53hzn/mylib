@@ -8,6 +8,13 @@
 // @grant        none
 // ==/UserScript==
 
+/*
+*使用前需在sessionStorage里设定idx_now为0
+*设置data_saved为""
+*设置excec_list为以\n分隔的字符串，直接从Excel复制即可
+*/
+
+
 (function() {
     'use strict';
 	var test_id = document.getElementById("selectpick-span-ddlActivitynew").innerText;
