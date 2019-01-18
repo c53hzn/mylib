@@ -22,13 +22,21 @@
 		output_html += "<td>" + trs[i].children[9].innerText + "</td></tr>";
 	}
 	var str = "<table><tbody>" + output_html + "</tbody></table>";
-	var txtArea = document.createElement("textarea");
-
-	document.getElementsByTagName("body")[0].appendChild(txtArea);
-    txtArea.style = "position: fixed; bottom: 0px; left: 0px; right: 0px; margin: 0px auto; width: 300px; height: 100px;";
-	txtArea.value = str;
-	txtArea.focus();
-	txtArea.select();
-	document.execCommand("copy");
-	//document.getElementsByTagName("body")[0].removeChild(txtArea);
+	//从会话缓存获取事先输入的信息
+	var data_saved = sessionStorage.getItem("data_saved");
+	var idx_now = sessionStorage.getItem("idx_now");
+	var excec_list = sessionStorage.getItem("excec_list");
+	//给会话缓存添加信息
+	data_saved += str;
+	sessionStorage.setItem("data_saved", data_saved);
+	//给执行清单增加进度
+	idx_now++;
+	sessionStorage.setItem("idx_now", idx_now);
+	//清单没执行完的话500毫秒之后去下一个页面
+	var excec_list_arr = excec_list.split("\n");
+	if (idx_now != excec_list_arr.length) {
+		setTimeout(function() {
+			window.location.href = excec_list_arr[idx_now];
+		},500);
+	}
 })();
