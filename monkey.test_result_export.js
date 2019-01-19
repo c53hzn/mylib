@@ -14,7 +14,6 @@
 *设置excec_list为以\n分隔的字符串，直接从Excel复制即可
 */
 
-
 (function() {
     'use strict';
 	var test_id = document.getElementById("selectpick-span-ddlActivitynew").innerText;
@@ -46,4 +45,14 @@
 			window.location.href = excec_list_arr[idx_now];
 		},500);
 	}
+
+	/*以下是可以直接复制内容而不显示过程的代码*/
+	/*但是如果用了sessionStorage + Tampermonkey就不需要物理复制了*/
+	// document.getElementsByTagName("body")[0].appendChild(txtArea);
+	// txtArea.style = "position: fixed; bottom: 0px; left: 0px; right: 0px; margin: 0px auto; width: 300px; height: 100px;";
+	// txtArea.value = str;
+	// txtArea.focus();
+	// txtArea.select();
+	// document.execCommand("copy");
+	// document.getElementsByTagName("body")[0].removeChild(txtArea);
 })();
