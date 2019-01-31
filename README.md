@@ -19,3 +19,5 @@ A collection of JavaScript libraries, user guide included.
 8. [check eBay fitment page for update](https://www.houzhenni.com/mylib/monkey.checkFitment.js)
 
 9. [extract eBay search result on a list basis](https://www.houzhenni.com/mylib/monkey.ebaySearch.js)
+
+10. [extract contents from a URL list](https://www.houzhenni.com/mylib/monkey.test_result_export.js)
