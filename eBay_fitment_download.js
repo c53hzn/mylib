@@ -1,5 +1,6 @@
 ;(function(){
 	// fitment API https://frame.ebay.com/ebaymotors/ws/eBayISAPI.dll?GetFitmentData
+	// must go to API page to use the following codes
 	var script = document.createElement("script");
 	script.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js");
 	document.body.appendChild(script);
@@ -8,7 +9,7 @@
 })();
 
 function addDOM() {
-	$("body").html($("body").html() + "<p style=\"position: fixed; top: 0px; left: 0px;\"><input type=\"text\" id=\"itmID\" placeholder=\"Item ID\"><br><input type=\"button\" id=\"btn1\" value=\"download\"></p>");
+	$("body").html("<p style=\"position: fixed; top: 0px; left: 0px;\"><input type=\"text\" id=\"itmID\" placeholder=\"Item ID\"><br><input type=\"button\" id=\"btn1\" value=\"download\"></p>");
 	$("#btn1").click(function(){
 		if (/^\d{12}$/.test($("#itmID").val())) {
 			var itemID = $("#itmID").val();
