@@ -38,7 +38,7 @@ function addDOM() {
 			$.getJSON(reqURL + itemID, function(res){
 				console.log(res);
 				if (!res.status) {
-					alert("no data");
+					alert("This item ID is not associated with fitment table");
 				} else if (res.status.name == "SUCCESS") {
 					var data = res.data;
 					var displayName = res.displayNames;
@@ -62,10 +62,12 @@ function addDOM() {
 						output = output.replace(/,$/, "\r\n");
 					}
 					downloadData(output, itemID + "-fitment.csv");
-				}
+				} else if (res.status.name == "FAILURE") {
+                    alert("request failed, please try again");
+                }
 			});
 		} else {
-			alert("Please input a valid item ID!");
+			alert("Invalid item ID!");
 		}
 	});
     $("body").on("click", "#addItmID", function() {
