@@ -25,3 +25,5 @@ A collection of JavaScript libraries, user guide included.
 11. [download ebay fitment table to csv](https://www.houzhenni.com/mylib/monkey.ebay_fitment_download.js)
 
 12. [download mass amount of data](https://www.houzhenni.com/mylib/monkey.export_que_job.js)
+
+13. [《猫国建设者》游戏外挂](https://www.houzhenni.com/mylib/monkey.kittensgame.js)（自动采集猫薄荷）
