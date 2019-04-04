@@ -25,15 +25,18 @@
         var table = $(".listingtable");
 
         var trs = $(table).children("tbody").children();
+        var header_arr = [];
+        for (let j = 0; j < trs[0].children.length; j++) {
+            header_arr.push($(trs[0]).children().eq(j).text());
+        }
         var output_arr = [];
         for (let i = 1; i < trs.length; i++){
             let row_obj = {};
             row_obj["Page"] = "Page " + curr_page;
-            row_obj["header_1"] = $(trs[i]).children().eq(0).text();
-            row_obj["header_2"] = $(trs[i]).children().eq(1).text();
-            row_obj["header_3"] = $(trs[i]).children().eq(2).text();
-            row_obj["header_4"] = $(trs[i]).children().eq(3).text();
-            row_obj["header_5"] = $(trs[i]).children().eq(4).text();
+            for (let k = 0; k < header_arr.length; k++) {
+                row_obj[header_arr[k]] = $(trs[i]).children().eq(k).text();
+            }
+            // row_obj["failure detail"] = $(trs[i]).children().eq(2).children().attr("title") || "-";
             output_arr.push(row_obj);
         }
         var lastResult_arr = JSON.parse(localStorage.getItem("Data_export")) || [];
@@ -46,6 +49,7 @@
 
             setTimeout(function() {
                 var output_str = CSVJSON.json2csv(newResult_arr);
+                // output_str = output_str.replace(/^\".+\n/, "");//delete header row
                 let filename = "p" + prependZero(curr_page, 4);
                 clickDownload(output_str, filename);
                 localStorage.removeItem("Data_export");
