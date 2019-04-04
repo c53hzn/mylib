@@ -111,3 +111,10 @@ function prependZero(num, digit) {
     }
     return zero_str + num_str;
 }
+
+// $("table").mouseenter(function() {
+// 	$(this).find("td").css("background-color", "rgba(247,182,182,0.5)");
+// });
+// $("table").mouseleave(function() {
+// 	$(this).find("td").removeAttr("style");
+// });
