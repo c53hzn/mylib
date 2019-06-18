@@ -22,6 +22,7 @@ var styleContent = `
 	margin: auto;
 	max-width: 100%;
 	max-height: 100%;
+	min-width: 800px;
 	border: 1px solid black;
 	cursor: zoom-out;
 }
