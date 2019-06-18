@@ -59,6 +59,11 @@ var styleContent = `
   	z-index: -1;
   }
 }
+@media all and (max-width: 800px) {
+  #mask_child {
+  	min-width: auto;
+  }
+}
 `;
 var d = document;
 var maskStyle = d.createElement("style");
