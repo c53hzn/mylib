@@ -11,7 +11,6 @@ var styleContent = `
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, .5);
-	z-index: 999;
 }
 #mask_child {
 	position: absolute;
@@ -22,7 +21,7 @@ var styleContent = `
 	margin: auto;
 	max-width: 100%;
 	max-height: 100%;
-	min-width: 800px;
+	min-width: 700px;
 	border: 1px solid black;
 	cursor: zoom-out;
 }
@@ -31,6 +30,7 @@ var styleContent = `
 }
 .fade-in-anime {
 	animation: fade-in 0.5s;
+  	z-index: 999;
 }
 .fade-out-anime {
 	animation: fade-out 0.5s;
@@ -39,23 +39,24 @@ var styleContent = `
 @keyframes fade-in {
   from {
   	opacity: 0;
-  	display: block;
+  	z-index: 999;
   }
   to {
   	opacity: 1;
-  	display: block;
+  	z-index: 999;
   }
 }
 @keyframes fade-out {
   0% {
   	opacity: 1;
-  	display: block;
+  	z-index: 999;
   }
   99% {
   	opacity: 0;
-  	display: block;
+  	z-index: 999;
   }
   100% {
+  	opacity: 0;
   	z-index: -1;
   }
 }
@@ -75,7 +76,7 @@ maskStyle.innerHTML = styleContent;
 d.querySelector("head").appendChild(maskStyle);
 d.querySelector("body").appendChild(maskDom);
 var mask_layer = d.getElementById("mask_layer");
-var imgArr = d.querySelectorAll(".markdown-body img");
+var imgArr = d.querySelectorAll("article img");
 for (let i = 0; i < imgArr.length; i++) {
 	let parent = imgArr[i].parentNode;
 	let grandParent = parent.parentNode;
