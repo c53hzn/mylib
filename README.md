@@ -27,3 +27,5 @@ A collection of JavaScript libraries, user guide included.
 12. [download mass amount of data](https://www.houzhenni.com/mylib/monkey.export_que_job.js)
 
 13. [《猫国建设者》游戏外挂](https://www.houzhenni.com/mylib/monkey.kittensgame.js)（自动采集猫薄荷）
+
+14. [直接复制eBay产品详情页的所有橱窗图链接](https://www.houzhenni.com/mylib/monkey.copyebaygallerypic.js)
