@@ -14,7 +14,7 @@ for (let i = 0; i < dirArr.length; i++) {
 function addDateSlug(fileName) {
 	var str = fs.readFileSync(fileName).toString();
 	var arr = str.split("\n");
-	arr[0] = "---\ndate: " + fileName.substring(0, 10) + "slug: " + fileName.substring(11, fileName.length - 3);
+	arr[0] = "---\ndate: " + fileName.substring(0, 10) + "\nslug: " + fileName.substring(11, fileName.length - 3);
 	str = arr.join("\n");
 	fs.writeFileSync(fileName, str);
 }
