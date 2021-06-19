@@ -31,3 +31,5 @@ A collection of JavaScript libraries, user guide included.
 14. [直接复制eBay产品详情页的所有橱窗图链接](https://www.houzhenni.com/mylib/monkey.copyebaygallerypic.js)
 
 15. [Copy Custom Content](https://www.houzhenni.com/mylib/copy-custom-content)
+
+16. [Download Instagram Video](https://www.houzhenni.com/mylib/download-instagram-video)
