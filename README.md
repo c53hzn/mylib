@@ -33,3 +33,5 @@ A collection of JavaScript libraries, user guide included.
 15. [Copy Custom Content](https://www.houzhenni.com/mylib/copy-custom-content)
 
 16. [Download Instagram Video](https://www.houzhenni.com/mylib/download-instagram-video)
+
+<script src="/js/statcounter.js?2021-08-30"></script>
