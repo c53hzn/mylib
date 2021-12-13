@@ -1,4 +1,6 @@
-# Purpose
+# Get eBay categories
+
+## Purpose
 
 To get eBay store categories in different levels
 
