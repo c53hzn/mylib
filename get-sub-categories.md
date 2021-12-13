@@ -1,4 +1,4 @@
-# Get eBay categories
+# Get eBay store categories
 
 ## Purpose
 
