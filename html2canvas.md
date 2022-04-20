@@ -5,7 +5,7 @@
 
     ;(function(){
         var script1 = document.createElement("script");
-        script1.setAttribute("src","https://www.houzhenni.com/mylib/html2canvas.min.js");
+        script1.setAttribute("src","https://c53hzn.github.io/mylib/html2canvas.min.js");
         document.body.appendChild(script1);
     })();
 
